@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-const Rent = (props) => {
+const PlaceCard = (props) => {
   const {placeName} = props;
 
   return <article className="cities__place-card place-card">
@@ -21,14 +21,14 @@ const Rent = (props) => {
         </div>
         <button className="place-card__bookmark-button button" type="button">
           <svg className="place-card__bookmark-icon" width="18" height="19">
-
+            <use xlinkHref="#icon-bookmark"/>
           </svg>
           <span className="visually-hidden">To bookmarks</span>
         </button>
       </div>
       <div className="place-card__rating rating">
         <div className="place-card__stars rating__stars">
-          <span width= "93%"></span>
+          <span style={{width:`74%`}}/>
           <span className="visually-hidden">Rating</span>
         </div>
       </div>
@@ -40,8 +40,8 @@ const Rent = (props) => {
   </article>;
 };
 
-Rent.propTypes = {
+PlaceCard.propTypes = {
   placeName: PropTypes.string,
 };
 
-export default Rent;
+export default PlaceCard;

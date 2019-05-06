@@ -1,5 +1,5 @@
 import React from "react";
-import Rent from "./../rent/rent.jsx";
+import Rent from "./../place-card/place-card.jsx";
 import PropTypes from "prop-types";
 
 const App = (props) => {
