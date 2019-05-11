@@ -1,9 +1,9 @@
 import React from "react";
-import PlaceCard from "./../place-card/place-card.jsx";
 import PropTypes from "prop-types";
+import PlaceList from "./../place-list/place-list.jsx";
 
 const App = (props) => {
-  const {names, onClick} = props;
+  const {offers} = props;
   return <React.Fragment>
     <header className="header">
       <div className="container">
@@ -91,12 +91,9 @@ const App = (props) => {
               </select>
 
             </form>
-            <div className="cities__places-list places__list tabs__content">
-              {names.map((it, i) => {
-                return <PlaceCard key={i} placeName={it} onClick={onClick}/>;
-              }
-              )}
-            </div>
+            <PlaceList
+              offers={offers}
+            />
           </section>
           <div className="cities__right-section">
             <section className="cities__map map"></section>
@@ -108,8 +105,7 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  names: PropTypes.array,
-  onClick: PropTypes.func,
+  offers: PropTypes.array,
 };
 
 export default App;

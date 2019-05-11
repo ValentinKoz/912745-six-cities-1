@@ -1,17 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
+import offers from "./mocks/offers.js";
 
 const init = () => {
-  const data = {
-    names: [`Beautiful & luxurious apartment at great location`, `Canal View Prinsengracht`, `Nice, cozy, warm big bed apartment`, `Wood and stone place`],
-    onClick() { },
-  };
 
   ReactDOM.render(
       <App
-        names={data.names}
-        onClick={data.onClick}
+        offers={offers}
       />,
       document.getElementById(`root`)
   );
