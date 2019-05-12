@@ -19,7 +19,7 @@ const mock = {
 
 it(`PlaceCard correctly handles click`, () => {
   const {offer} = mock;
-  const clickHandler = jest.fn();
+  const clickHandler = jest.fn(() => offer);
   const placeCard = shallow(<PlaceCard
     offer={offer}
     onClick={clickHandler}
@@ -27,5 +27,6 @@ it(`PlaceCard correctly handles click`, () => {
   const buttonCard = placeCard.find(`div > a`);
   buttonCard.simulate(`click`, {preventDefault() { }});
 
+  expect(clickHandler.mock.results[0].value).toEqual(offer);
   expect(clickHandler).toHaveBeenCalledTimes(1);
 });

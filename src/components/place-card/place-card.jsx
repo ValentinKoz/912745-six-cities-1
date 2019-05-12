@@ -14,7 +14,9 @@ const PlaceCard = ({offer, onClick}) => {
       <span>Premium</span>
     </div>
     <div className="cities__image-wrapper place-card__image-wrapper">
-      <a href="#" onClick={onClick}>
+      <a href="#" onClick={() => {
+        onClick(offer);
+      }}>
         <img className="place-card__image" src="img/apartment-01.jpg" width="260" height="200" alt="Place image"/>
       </a>
     </div>
@@ -38,7 +40,9 @@ const PlaceCard = ({offer, onClick}) => {
         </div>
       </div>
       <h2 className="place-card__name">
-        <a href="#" onClick={onClick}>{name}</a>
+        <a href="#" onClick={()=> {
+          onClick(offer);
+        }}>{name}</a>
       </h2>
       <p className="place-card__type">{type}</p>
     </div>

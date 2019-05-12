@@ -10,17 +10,21 @@ class PlaceList extends PureComponent {
     this.state = {
       offer: 0,
     };
+    this.updateOffer = this.updateOffer.bind(this);
   }
+
+  updateOffer(it) {
+    this.setState({
+      offer: it,
+    });
+  }
+
   render() {
     const {offers} = this.props;
 
     return <div className="cities__places-list places__list tabs__content">
       {offers.map((it, i) => {
-        return <PlaceCard key={i} offer={it} onClick={() => {
-          this.setState({
-            offer: it,
-          });
-        }}/>;
+        return <PlaceCard key={i} offer={it} onClick={this.updateOffer}/>;
       })}
     </div>;
   }
