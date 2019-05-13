@@ -24,7 +24,7 @@ it(`PlaceCard correctly handles click`, () => {
     offer={offer}
     onClick={clickHandler}
   />);
-  const buttonCard = placeCard.find(`div > a`);
+  const buttonCard = placeCard.find(`.place-card__image-wrapper a`);
   buttonCard.simulate(`click`, {preventDefault() { }});
 
   expect(clickHandler.mock.results[0].value).toEqual(offer);
