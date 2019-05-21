@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import PlaceList from "./../place-list/place-list.jsx";
+import Map from "./../map/map.jsx";
 
 const App = (props) => {
   const {offers} = props;
@@ -96,7 +97,7 @@ const App = (props) => {
             />
           </section>
           <div className="cities__right-section">
-            <section className="cities__map map"></section>
+          <section className=".cities__map map"><Map/></section>
           </div>
         </div>
       </div>
