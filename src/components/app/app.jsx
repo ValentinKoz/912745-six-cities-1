@@ -5,7 +5,7 @@ import Map from "./../map/map.jsx";
 
 const App = (props) => {
   const {offers} = props;
-  return <React.Fragment>
+  return <div className="page page--gray page--main">
     <header className="header">
       <div className="container">
         <div className="header__wrapper">
@@ -97,12 +97,12 @@ const App = (props) => {
             />
           </section>
           <div className="cities__right-section">
-          <Map/>
+            <Map offers={offers}/>
           </div>
         </div>
       </div>
     </main>
-  </React.Fragment>;
+  </div>;
 };
 
 App.propTypes = {
