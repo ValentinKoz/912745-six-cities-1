@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
+<div
+  className="page page--gray page--main"
+>
   <header
     className="header"
   >
@@ -53,7 +55,7 @@ Array [
         </nav>
       </div>
     </div>
-  </header>,
+  </header>
   <main
     className="page__main page__main--index"
   >
@@ -571,10 +573,11 @@ Array [
         >
           <section
             className="cities__map map"
+            id="map"
           />
         </div>
       </div>
     </div>
-  </main>,
-]
+  </main>
+</div>
 `;

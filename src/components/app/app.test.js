@@ -2,6 +2,10 @@ import React from 'react';
 import App from './app.jsx';
 import renderer from 'react-test-renderer';
 
+const div = global.document.createElement(`div`);
+div.setAttribute(`id`, `map`);
+global.document.body.appendChild(div);
+
 const mocks = {
   offers: [
     {
@@ -12,6 +16,7 @@ const mocks = {
       rating: 0,
       name: `AAAA`,
       type: `Apartment`,
+      coordinates: [52.369553943508, 4.85309666406198],
     },
     {
       price: {
@@ -21,6 +26,7 @@ const mocks = {
       rating: 0,
       name: `AAAA`,
       type: `Apartment`,
+      coordinates: [52.369553943508, 4.85309666406198],
     },
     {
       price: {
@@ -30,6 +36,7 @@ const mocks = {
       rating: 0,
       name: `AAAA`,
       type: `Apartment`,
+      coordinates: [52.369553943508, 4.85309666406198],
     }
   ],
 };

@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import PlaceList from "./../place-list/place-list.jsx";
+import Map from "./../map/map.jsx";
 
 const App = (props) => {
   const {offers} = props;
-  return <React.Fragment>
+  return <div className="page page--gray page--main">
     <header className="header">
       <div className="container">
         <div className="header__wrapper">
@@ -96,12 +97,12 @@ const App = (props) => {
             />
           </section>
           <div className="cities__right-section">
-            <section className="cities__map map"></section>
+            <Map offers={offers}/>
           </div>
         </div>
       </div>
     </main>
-  </React.Fragment>;
+  </div>;
 };
 
 App.propTypes = {
